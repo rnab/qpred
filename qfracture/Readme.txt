@@ -20,6 +20,19 @@ along with QFracture.  If not, see <http://www.gnu.org/licenses/>.
 
 ----
 
+Please note:
+
+  The QFracture algorithms are also available from ClinRisk Ltd. under a commercial licence.
+  This is for suppliers who do not want to release any code under the open source licence.  
+  With the commercial licence, suppliers can either use the open source code and base their code on that, or use our .NET software development kit.  
+  Closed source implementations need to undergo an accreditation process with ClinRisk Ltd., to ensure that their published software implements QFracture accurately.
+
+  Use of the QFracture trademark is linked to using the latest version of the QFracture algorithm.  We expect that the algorithm will be updated annually, re-fitted to the latest version of the QResearch database.
+
+  Support contracts are available from ClinRisk Ltd., both for the open source route, and also for those who wish to go a closed source route.
+
+----
+
 To compile QFracture on a UNIX-like system, type
  make
  make executables
