@@ -29,3 +29,8 @@ Please check http://qfracture.org for our latest sources.
 The intention is to update the QFracture algorithms annually.  
 
 This is the initial 2009, released on the day of publication of the BMJ QFracture paper, 20/11/2009, and has STATA dta time stamp: 2 Sep 2009 08:55.
+
+There are a few patients where the risk of hip fracture calculated with the algorithm appears to exceed the overall estimated fracture risk. 
+This situation affects less than 0.5% of the population and is found in the most  elderly patients with multiple risk  factors. 
+Since the hip fracture algorithm has the better performance, we have substituted this value for the overall fracture risk value for those patients to avoid any under-estimation in risk. 
+There are less data available for modelling at the extremes of age and this is the most likely explanation for why the models appear less stable at the extremes.
