@@ -1,24 +1,24 @@
-Welcome to QRISK2-2010 (http://qrisk.org)
+Welcome to QRISK2-2011 (http://qrisk.org)
 -------------------------------------------
 
-Copyright 2010 ClinRisk Ltd.
+Copyright 2011 ClinRisk Ltd.
 
-This file is part of QRISK2-2010 (http://qrisk.org).
+This file is part of QRISK2-2011 (http://qrisk.org).
 
-QRISK2-2010 is free software: you can redistribute it and/or modify
+QRISK2-2011 is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-QRISK2-2010 is distributed in the hope that it will be useful,
+QRISK2-2011 is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public License
-along with QRISK2-2010.  If not, see <http://www.gnu.org/licenses/>.
+along with QRISK2-2011.  If not, see <http://www.gnu.org/licenses/>.
 
-The initial version of this file, to be found at http://qrisk.org, faithfully implements QRISK2-2010.
+The initial version of this file, to be found at http://qrisk.org, faithfully implements QRISK2-2011.
 We have released this code under the GNU Lesser General Public License to enable others to implement the algorithm faithfully.  
 However, the nature of the GNU Lesser General Public License is such that we cannot prevent, for example, someone randomly permuting the coefficients. 
 We stress, therefore, that it is the responsibility of the end user to check that the source that they receive produces the same results as the original code posted at http://qrisk.org.
@@ -26,12 +26,13 @@ Inaccurate implementations of risk scores can lead to wrong patients being given
 
 ----
 
-To compile QRISK2-2010 on a UNIX-like system, type
+To compile QRISK2-2011 on a UNIX-like system, type
  make
  make executables
 to create the command line executables.
 
 Please check http://qrisk.org for our latest sources.
-The QRISK2-2010 algorithms will be updated annually.  
+The QRISK2-2011 algorithms will be updated annually.  
 
-This is the initial 2010 open source release, and has STATA dta time stamp: 26 Feb 2010 13:37
+This is the initial 2011 open source release, and has STATA dta time stamp: 
+ 9 Jan 2011 22:05
