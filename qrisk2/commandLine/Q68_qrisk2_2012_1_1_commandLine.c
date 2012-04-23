@@ -1,72 +1,72 @@
 /* 
- * Copyright 2011 ClinRisk Ltd.
+ * Copyright 2012 ClinRisk Ltd.
  * 
- * This file is part of QRISK2-2011 (http://qrisk.org, http://svn.clinrisk.co.uk/opensource/qrisk2).
+ * This file is part of QRISK2-2012 (http://qrisk.org, http://svn.clinrisk.co.uk/qrisk2).
  * 
- * QRISK2-2011 is free software: you can redistribute it and/or modify
+ * QRISK2-2012 is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * QRISK2-2011 is distributed in the hope that it will be useful,
+ * QRISK2-2012 is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  * 
  * You should have received a copy of the GNU Lesser General Public License
- * along with QRISK2-2011.  If not, see <http://www.gnu.org/licenses/>.
+ * along with QRISK2-2012.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * The initial version of this file, to be found at http://svn.clinrisk.co.uk/opensource/qrisk2, faithfully implements QRISK2-2011.
+ * The initial version of this file, to be found at http://svn.clinrisk.co.uk/qrisk2, faithfully implements QRISK2-2012.
  * We have released this code under the GNU Lesser General Public License to enable others to implement the algorithm faithfully.
  * However, the nature of the GNU Lesser General Public License is such that we cannot prevent, for example, someone altering the coefficients.
- * We stress, therefore, that it is the responsibility of the end user to check that the source that they receive produces the same results as the original code posted at http://svn.clinrisk.co.uk/opensource/qrisk2.
+ * We stress, therefore, that it is the responsibility of the end user to check that the source that they receive produces the same results as the original code posted at http://svn.clinrisk.co.uk/qrisk2.
  * Inaccurate implementations of risk scores can lead to wrong patients being given the wrong treatment.
  * 
  * This file has been auto-generated.
- * XML source: Q65_qrisk2_2011_2_1.xml
- * STATA dta time stamp: 9 Jan 2011 22:05
- * C file create date: Thu May  5 10:09:34 BST 2011
+ * XML source: Q68_qrisk2_2012_1_1.xml
+ * STATA dta time stamp: 2 Jan 2012 23:10
+ * C file create date: Tue  3 Jan 2012 09:15:13 GMT
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <irisk/Q65_qrisk2_2011_2_1.h>
+#include <clinrisk/Q68_qrisk2_2012_1_1.h>
 
 static double score[16];
 static char errorBuf[1024];
 static int error;
 
 void usage(void) {
-	printf(" * Copyright 2011 ClinRisk Ltd.\n");
+	printf(" * Copyright 2012 ClinRisk Ltd.\n");
 	printf(" * \n");
-	printf(" * This is part of QRISK2-2011 (http://qrisk.org, http://svn.clinrisk.co.uk/opensource/qrisk2).\n");
+	printf(" * This is part of QRISK2-2012 (http://qrisk.org, http://svn.clinrisk.co.uk/qrisk2).\n");
 	printf(" * \n");
-	printf(" * QRISK2-2011 is free software: you can redistribute it and/or modify\n");
+	printf(" * QRISK2-2012 is free software: you can redistribute it and/or modify\n");
 	printf(" * it under the terms of the GNU Lesser General Public License as published by\n");
 	printf(" * the Free Software Foundation, either version 3 of the License, or\n");
 	printf(" * (at your option) any later version.\n");
 	printf(" * \n");
-	printf(" * QRISK2-2011 is distributed in the hope that it will be useful,\n");
+	printf(" * QRISK2-2012 is distributed in the hope that it will be useful,\n");
 	printf(" * but WITHOUT ANY WARRANTY; without even the implied warranty of\n");
 	printf(" * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n");
 	printf(" * GNU Lesser General Public License for more details.\n");
 	printf(" * \n");
 	printf(" * You should have received a copy of the GNU Lesser General Public License\n");
-	printf(" * along with QRISK2-2011.  If not, see <http://www.gnu.org/licenses/>.\n");
+	printf(" * along with QRISK2-2012.  If not, see <http://www.gnu.org/licenses/>.\n");
 	printf(" * \n");
-	printf(" * The initial version of this file, to be found at http://svn.clinrisk.co.uk/opensource/qrisk2, faithfully implements QRISK2-2011.\n");
+	printf(" * The initial version of this file, to be found at http://svn.clinrisk.co.uk/qrisk2, faithfully implements QRISK2-2012.\n");
 	printf(" * We have released this code under the GNU Lesser General Public License to enable others to implement the algorithm faithfully.\n");
 	printf(" * However, the nature of the GNU Lesser General Public License is such that we cannot prevent, for example, someone altering the coefficients.\n");
-	printf(" * We stress, therefore, that it is the responsibility of the end user to check that the source that they receive produces the same results as the original code posted at http://svn.clinrisk.co.uk/opensource/qrisk2.\n");
+	printf(" * We stress, therefore, that it is the responsibility of the end user to check that the source that they receive produces the same results as the original code posted at http://svn.clinrisk.co.uk/qrisk2.\n");
 	printf(" * Inaccurate implementations of risk scores can lead to wrong patients being given the wrong treatment.\n");
 	printf(" *\n");
 	printf(" * This file has been auto-generated.\n");
-	printf(" * XML source: Q65_qrisk2_2011_2_1.xml\n");
-	printf(" * STATA dta time stamp: 9 Jan 2011 22:05\n");
-	printf(" * C file create date: Thu May  5 10:09:34 BST 2011\n");
+	printf(" * XML source: Q68_qrisk2_2012_1_1.xml\n");
+	printf(" * STATA dta time stamp: 2 Jan 2012 23:10\n");
+	printf(" * C file create date: Tue  3 Jan 2012 09:15:13 GMT\n");
 	printf(" *\n");
 	printf("Usage:\n");
-	printf("  Q65_qrisk2_2011_2_1_commandLine age b_AF b_ra b_renal b_treatedhyp b_type2 bmi ethrisk fh_cvd rati sbp smoke_cat surv town\n");
+	printf("  Q68_qrisk2_2012_1_1_commandLine age b_AF b_ra b_renal b_treatedhyp b_type2 bmi ethrisk fh_cvd rati sbp smoke_cat surv town\n");
 }
 
 int main (int argc, char *argv[]) {
