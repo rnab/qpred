@@ -157,9 +157,9 @@ int age,int antipsychotics_current,int b_CCF,int b_anycancer,int b_copd,int b_ib
 		ok=0;
 		strlcat(errorBuf,"error: smoke_cat must be in range (0,4)\n",errorBufSize);
 	}
-	if (!i_in_range(surv,1,15)) {
+	if (!i_in_range(surv,1,5)) {
 		ok=0;
-		strlcat(errorBuf,"error: surv must be in range (1,15)\n",errorBufSize);
+		strlcat(errorBuf,"error: surv must be in range (1,5)\n",errorBufSize);
 	}
 	if (!is_boolean(z1_admit)) {
 		ok=0;
